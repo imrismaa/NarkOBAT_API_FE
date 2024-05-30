@@ -121,31 +121,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($data as $apotik)
                         <tr>
-                            <td data-label="#">001</td>
-                            <td data-label="Name">Kimia Farma</td>
-                            <td data-label="Alamat">2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">002</td>
-                            <td data-label="Name">Kimia Farma</td>
-                            <td data-label="Alamat">2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">003</td>
-                            <td data-label="Name">Kimia Farma</td>
-                            <td data-label="Alamat">2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">004</td>
-                            <td data-label="Name">Kimia Farma</td>
-                            <td data-label="Alamat">2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">005</td>
-                            <td data-label="Name">Kimia Farma</td>
-                            <td data-label="Alamat">2972 Westheimer Rd. Santa Ana, Illinois 85486 </td>
-                        </tr>
+                            <td data-label="#">{{$apotik['id']}}</td>
+                            <td data-label="Name">{{$apotik['nama apotik']}}</td>
+                            <td data-label="Alamat">{{$apotik['alamat']}}</td>
+                        </tr>    
+                        @endforeach
                     </tbody>
                 </table>
             </div>

@@ -3,9 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ViewController extends Controller
 {
+    private $apiBaseUrl;
+
+    public function __construct()
+    {
+        $this -> apiBaseUrl = config('NARKOBAT_API_ENDPOINT');
+
+    }
+
     public function register()
     {
         return view('register');
@@ -13,7 +23,8 @@ class ViewController extends Controller
 
     public function apotik()
     {
-        return view('apotik');
+        $response = Http::get( env('NARKOBAT_API_ENDPOINT') . "pharmacies");
+        return view('apotik', ['data' => $response['data']]);
     }
 
     public function login()
@@ -22,8 +33,9 @@ class ViewController extends Controller
     }
 
     public function obat()
-    {
-        return view('obat');
+    {   
+        $response = Http::get( env('NARKOBAT_API_ENDPOINT') . "drugs");
+        return view('obat', ['data' => $response['data']]);
     }
     public function profile()
     {

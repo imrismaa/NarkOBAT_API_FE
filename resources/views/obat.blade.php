@@ -123,34 +123,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td data-label="#">0001</td>
-                            <td data-label="Name">Paracetamol</td>
-                            <td data-label="Jenis_Obat">Analgesik, Antipiretik </td>
-                            <td data-label="penyakit">Sakit kepala, demam</td>
-                            <td data-label="#">Rp5,000.00</td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">0001</td>
-                            <td data-label="Name">Paracetamol</td>
-                            <td data-label="Jenis_Obat">Analgesik, Antipiretik </td>
-                            <td data-label="penyakit">Sakit kepala, demam</td>
-                            <td data-label="#">Rp5,000.00</td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">0001</td>
-                            <td data-label="Name">Paracetamol</td>
-                            <td data-label="Jenis_Obat">Analgesik, Antipiretik </td>
-                            <td data-label="penyakit">Sakit kepala, demam</td>
-                            <td data-label="#">Rp5,000.00</td>
-                        </tr>
-                        <tr>
-                            <td data-label="#">0001</td>
-                            <td data-label="Name">Paracetamol</td>
-                            <td data-label="Jenis_Obat">Analgesik, Antipiretik </td>
-                            <td data-label="penyakit">Sakit kepala, demam</td>
-                            <td data-label="#">Rp5,000.00</td>
-                        </tr>
+                        @foreach ($data as $obat)
+                            <tr>
+                                <td data-label="#">{{$obat['id']}}</td>
+                                <td data-label="Name">{{$obat['nama obat']}}</td>
+                                <td data-label="Jenis_Obat">{{$obat['jenis obat']}}</td>
+                                <td data-label="penyakit">{{$obat['penyakit']}}</td>
+                                <td data-label="harga">RP {{$obat['harga']}} ,00</td>
+                            </tr>    
+                        @endforeach
                     </tbody>
                 </table>
             </div>

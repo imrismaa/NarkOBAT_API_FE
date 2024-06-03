@@ -16,10 +16,10 @@ class ViewController extends Controller
 
     }
 
-    public function register()
-    {
-        return view('register');
-    }
+    // public function register()
+    // {
+    //     return view('register');
+    // }
 
     public function apotik()
     {
@@ -27,10 +27,10 @@ class ViewController extends Controller
         return view('apotik', ['data' => $response['data']]);
     }
 
-    public function login()
-    {
-        return view('login');
-    }
+    // public function login()
+    // {
+    //     return view('login');
+    // }
 
     public function obat()
     {   

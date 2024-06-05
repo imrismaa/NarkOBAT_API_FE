@@ -26,13 +26,13 @@
             </div>
 
             <div class="mt-3">
-                <div class="title">Token</div>
+                {{-- <div class="title">Token</div>
                 <div class="mb-5 d-flex apply">
                     <input type="text" class="form-control token" placeholder="Masukkan Token Anda">
                     <a href="{{ route('profile-applied') }}">
                         <button class="btn btn-outline-success ms-3">Apply</button>
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

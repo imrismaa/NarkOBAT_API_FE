@@ -46,7 +46,7 @@
                     </svg>Apotek</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{[route('obat')}}"><svg xmlns="http://www.w3.org/2000/svg" class="me-2"
+                <a class="nav-link" href="javascript:window.location.href=window.location.href"><svg xmlns="http://www.w3.org/2000/svg" class="me-2"
                         width="15" height="18" viewBox="0 0 15 18" fill="none">
                         <path
                             d="M1.07143 0.23999H13.9286V2.18666H1.07143V0.23999ZM12.8571 3.15999H2.14286C0.964286 3.15999 0 4.03599 0 5.10666V15.8133C0 16.884 0.964286 17.76 2.14286 17.76H12.8571C14.0357 17.76 15 16.884 15 15.8133V5.10666C15 4.03599 14.0357 3.15999 12.8571 3.15999ZM11.7857 11.92H9.10714V14.3533H5.89286V11.92H3.21429V8.99999H5.89286V6.56666H9.10714V8.99999H11.7857V11.92Z"
@@ -60,10 +60,10 @@
     <div class="content" style="background: #F7F7F7;">
         <div class="row mb-3">
             <div class="col-md-6">
-                <div style="font-size: 24px;font-weight: 500;">Daftar Apotek</div>
+                <div style="font-size: 24px;font-weight: 500;">Daftar Obat</div>
             </div>
             <div class="col-md-6 text-end">
-                <button class="btn btn-primary" style="background: #6DA9E5;">+ Apotek</button>
+                <button class="btn btn-primary" style="background: #6DA9E5;">+ Obat</button>
             </div>
         </div>
 

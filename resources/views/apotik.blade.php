@@ -39,7 +39,7 @@
     <div class="sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="{{route('apotik')}}"><svg xmlns="http://www.w3.org/2000/svg" class="me-2"
+                <a class="nav-link" href="javascript:window.location.href=window.location.href"><svg xmlns="http://www.w3.org/2000/svg" class="me-2"
                         width="17" height="16" viewBox="0 0 17 16" fill="none">
                         <path
                             d="M15.4545 14.2087H17V15.7609H0V14.2087H1.54545V1.01522C1.54545 0.809391 1.62687 0.611991 1.77178 0.466446C1.9167 0.320902 2.11324 0.239136 2.31818 0.239136H14.6818C14.8868 0.239136 15.0833 0.320902 15.2282 0.466446C15.3731 0.611991 15.4545 0.809391 15.4545 1.01522V14.2087ZM7.72727 4.89566H6.18182V6.44783H7.72727V8H9.27273V6.44783H10.8182V4.89566H9.27273V3.34348H7.72727V4.89566ZM10.0455 14.2087H11.5909V9.55218H5.40909V14.2087H6.95455V11.1044H10.0455V14.2087Z"

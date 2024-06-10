@@ -7,7 +7,7 @@
             <div class="col-md-6 order-1">
                 <img src="{{ asset('img/img-auth.png') }}" alt="" class="img-fluid">
                 <p class="text-center ghoib" style="font-size: 20px;font-weight: 400;">Sudah punya akun? <span><a
-                            href="{{ route('register') }}"
+                            href="{{ route('login') }}"
                             style="color: #6DA9E5; text-decoration: none;">Login</a></span></p>
             </div>
 

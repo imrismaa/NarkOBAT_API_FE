@@ -22,25 +22,23 @@
             <div class="heading mb-4">Information</div>
             <div>
                 <div class="title">Nama Lengkap</div>
-                <div class="subtitle">Wade Warren</div>
+                <div class="subtitle"> {{Auth::user()->name}}</div>
             </div>
 
             <div class="mt-3">
                 <div class="title">Email</div>
-                <div class="subtitle">grothoff@icloud.com</div>
+                <div class="subtitle">{{Auth::user()->email}}</div>
             </div>
-
+            <br>
             <div class="mt-3">
-                <div class="title">Password</div>
-                <div class="subtitle">********</div>
+                <div class="title">Apotik</div>
+                <div class="subtitle">{{$apotikName}}</div>
             </div>
+            <br>
 
             <div class="mt-3">
                 <div class="title">Token</div>
-                <div class=" d-flex mb-5 apply">
-                    <input type="text" class="form-control token" placeholder="TyjahfstJKHJYnkj" disabled>
-                    <button class="btn btn-success ms-3">Applied</button>
-                </div>
+                <div class="subtitle">{{Auth::user()->token}}</div>
             </div>
             <div class="mt-3 mb-3">
                 <a href="{{ route('login') }}">

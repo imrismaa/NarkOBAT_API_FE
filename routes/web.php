@@ -18,11 +18,13 @@ Route::get('/dashboard', function () {
 
 
 Route::get('/apotik', [ViewController::class, 'apotik'])->name('apotik');
+Route::post('/apotik/connect', [ProfileController::class, 'connectApotik'])->name('apotik-connect');
 Route::get('/obat', [ViewController::class, 'obat'])->name('obat');
 Route::get('/stok', [ViewController::class, 'stok'])->name('stok');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ViewController::class, 'profile'])->name('profile');
+    Route::get('/profile-applied', [ViewController::class, 'profileApplied'])->name('profile-applied');
 });
 
 require __DIR__ . '/auth.php';

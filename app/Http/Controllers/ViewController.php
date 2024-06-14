@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
@@ -46,10 +47,17 @@ class ViewController extends Controller
     
     public function profile()
     {
+        if(Auth::user()->token != null){
+            return $this->profileApplied();
+        }
         return view('profile');
     }
     public function profileApplied()
     {
-        return view('profile-applied');
+        $apotikResponse = Http::get(env('NARKOBAT_API_ENDPOINT'). "pharmacies/" . Auth::user()->id_apotik); 
+        $apotikData = json_decode($apotikResponse->body(), true);
+        $apotikName = $apotikData['data']['nama apotik'];
+        $apotikToken = Auth::user()->token;
+        return view('profile-applied', compact('apotikName', 'apotikToken'));        
     }
 }

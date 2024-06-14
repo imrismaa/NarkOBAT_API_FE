@@ -37,6 +37,13 @@ class ViewController extends Controller
         $response = Http::get( env('NARKOBAT_API_ENDPOINT') . "drugs");
         return view('obat', ['data' => $response['data']]);
     }
+
+    public function stok()
+    {   
+        $response = Http::get( env('NARKOBAT_API_ENDPOINT') . "stock");
+        return view('stok', ['data' => $response['data']]);
+    }
+    
     public function profile()
     {
         return view('profile');

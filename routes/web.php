@@ -19,6 +19,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/apotik', [ViewController::class, 'apotik'])->name('apotik');
 Route::get('/obat', [ViewController::class, 'obat'])->name('obat');
+Route::get('/stok', [ViewController::class, 'stok'])->name('stok');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ViewController::class, 'profile'])->name('profile');

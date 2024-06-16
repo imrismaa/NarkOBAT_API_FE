@@ -1,8 +1,8 @@
 @extends('layouts.layout');
+<title>Stok</title>
 
-<title>Apotik</title>
 
-<nav class="navbar navbar-expand-lg  admin">
+<nav class="navbar navbar-expand-lg admin">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ asset('img/NarkOBAT.png') }}" alt="" class="img-fluid">
@@ -39,7 +39,7 @@
     <div class="sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="javascript:window.location.href=window.location.href"><svg xmlns="http://www.w3.org/2000/svg" class="me-2"
+                <a class="nav-link" href="{{route('apotik')}}"><svg xmlns="http://www.w3.org/2000/svg" class="me-2"
                         width="17" height="16" viewBox="0 0 17 16" fill="none">
                         <path
                             d="M15.4545 14.2087H17V15.7609H0V14.2087H1.54545V1.01522C1.54545 0.809391 1.62687 0.611991 1.77178 0.466446C1.9167 0.320902 2.11324 0.239136 2.31818 0.239136H14.6818C14.8868 0.239136 15.0833 0.320902 15.2282 0.466446C15.3731 0.611991 15.4545 0.809391 15.4545 1.01522V14.2087ZM7.72727 4.89566H6.18182V6.44783H7.72727V8H9.27273V6.44783H10.8182V4.89566H9.27273V3.34348H7.72727V4.89566ZM10.0455 14.2087H11.5909V9.55218H5.40909V14.2087H6.95455V11.1044H10.0455V14.2087Z"
@@ -55,7 +55,7 @@
                     </svg>Obat</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('stok')}}">
+                <a class="nav-link" href="javascript:window.location.href=window.location.href">
                     <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="17" height="18" viewBox="0,0,256,256">
                     <g fill-opacity="0.28" fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M1,3v12h48v-12zM3,17v31h44v-31zM17.5,20h15c1.38281,0 2.5,1.11719 2.5,2.5c0,1.38281 -1.11719,2.5 -2.5,2.5h-15c-1.38281,0 -2.5,-1.11719 -2.5,-2.5c0,-1.38281 1.11719,-2.5 2.5,-2.5z"></path></g></g>
                     </svg>
@@ -68,10 +68,10 @@
     <div class="content" style="background: #F7F7F7;">
         <div class="row mb-3">
             <div class="col-md-6">
-                <div style="font-size: 24px;font-weight: 500;">Daftar Apotek</div>
+                <div style="font-size: 24px;font-weight: 500;">Pengelolaan Apotek</div>
             </div>
             <div class="col-md-6 text-end">
-                <button class="btn btn-primary" style="background: #6DA9E5;">+ Apotek</button>
+                <button class="btn btn-primary" style="background: #6DA9E5;">+ Tambah</button>
             </div>
         </div>
 
@@ -81,16 +81,22 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nama Apotek</th>
-                        <th>Alamat</th>
+                        <th>Nama Obat</th>
+                        <th>Jenis Obat</th>
+                        <th>Penyakit</th>
+                        <th>Harga</th>
+                        <th>Stok</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data as $apotik)
+                    @foreach ($data as $obat)
                         <tr>
-                            <td data-label="#">{{$apotik['id']}}</td>
-                            <td data-label="Name">{{$apotik['nama apotik']}}</td>
-                            <td data-label="Alamat">{{$apotik['alamat']}}</td>
+                            <td data-label="#">{{$obat['id']}}</td>
+                            <td data-label="Name">{{$obat['nama obat']['nama obat']}}</td>
+                            <td data-label="Jenis_Obat">{{$obat['nama obat']['jenis obat']}}</td>
+                            <td data-label="penyakit">{{$obat['nama obat']['penyakit']}}</td>
+                            <td data-label="harga">RP {{$obat['nama obat']['harga']}} ,00</td>
+                            <td data-label="stok">{{$obat['stok']}}</td>
                         </tr>
                     @endforeach
                 </tbody>

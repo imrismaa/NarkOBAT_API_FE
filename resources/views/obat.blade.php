@@ -53,6 +53,13 @@
                             fill="#B5B5B5" />
                     </svg>Obat</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('stok')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="17" height="18" viewBox="0,0,256,256">
+                    <g fill-opacity="0.28" fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M1,3v12h48v-12zM3,17v31h44v-31zM17.5,20h15c1.38281,0 2.5,1.11719 2.5,2.5c0,1.38281 -1.11719,2.5 -2.5,2.5h-15c-1.38281,0 -2.5,-1.11719 -2.5,-2.5c0,-1.38281 1.11719,-2.5 2.5,-2.5z"></path></g></g>
+                    </svg>
+                    Kelola Apotek</a>
+            </li>
         </ul>
     </div>
 

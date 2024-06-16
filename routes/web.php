@@ -2,15 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ViewController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+    if(Auth::check()){
+        return response()->redirectTo('apotik');
+    }
     return response()->redirectTo('login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::get('/obat', function () {
 //     return view('obat');

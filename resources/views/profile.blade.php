@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-3" style="background: #6DA9E5;">
             <img src="{{ asset('img/profile.png') }}" alt="" class="img-fluid img-profil">
-            <div class="heading text-center mt-4" style="color: #fff;">Wade Warren</div>
+            <div class="heading text-center mt-4" style="color: #fff;"> {{Auth::User()->name}} </div>
             <div class="title text-center mb-3" style="color: #fff;">Public</div>
         </div>
         <div class="col-md-9">

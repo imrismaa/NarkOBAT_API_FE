@@ -88,13 +88,13 @@ class ProfileController extends Controller
                 break;
                 case 400:
                     $error = "Bad Request. Please check your input.";
-                    return redirect()->route('dashboard')->with('error', $error);
+                    return redirect()->route('profile')->with('error', $error);
                 case 401:
                     $error = "Unauthorized. Please check your credentials.";
-                    return redirect()->route('dashboard')->with('error', $error);
+                    return redirect()->route('profile')->with('error', $error);
                 default:
                     $error = "An unexpected error occurred. Please try again later.";
-                    return redirect()->route('dashboard')->with('error', $error);
+                    return redirect()->route('profile')->with('error', $error);
 
         }
     }
